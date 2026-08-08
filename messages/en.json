@@ -1,0 +1,225 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "whyUs": "Why Us",
+    "process": "Process",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Book Free Call"
+  },
+  "Hero": {
+    "eyebrow": "🚀 Andhra Pradesh & Telangana's #1 Growth Partner",
+    "h1Line1": "We build the systems",
+    "h1Line2": "",
+    "h1Line3": "behind serious growth.",
+    "subtext": "500+ businesses across Andhra Pradesh & Telangana trust us for high-performance websites, local SEO, WhatsApp automation, and AI-driven growth systems — built by hand, in your language.",
+    "ctaPrimary": "Get Your Free Audit",
+    "ctaSecondary": "Watch a Client Win",
+    "trustText": "★★★★★ Rated 4.9 by 200+ business owners",
+    "ticker": {
+      "item1": "⚡ 200+ Businesses Served",
+      "item2": "98% Client Retention",
+      "item3": "High-Impact Websites",
+      "item4": "Google GBP Domination",
+      "item5": "AI-Powered Lead Systems",
+      "item6": "WhatsApp Automation Engines",
+      "item7": "Local SEO Authority"
+    }
+  },
+  "Stats": {
+    "clients": "Active Clients",
+    "projects": "Projects Delivered",
+    "csat": "Client Satisfaction",
+    "experience": "Years Experience"
+  },
+  "About": {
+    "title": "Who We Are",
+    "subtitle": "We are a team of passionate creators, engineers, and digital marketers dedicated to driving real business results.",
+    "founderTitle": "Founder & Growth Architect",
+    "founderQuote": "Our mission is simple: to help Indian businesses transition from traditional models into high-growth digital powerhouses. We don't just build websites; we design engines for revenue.",
+    "mission": {
+      "title": "Our Mission",
+      "desc": "To empower local businesses with enterprise-grade digital tools and high-converting creative design."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "desc": "To become the most trusted digital transformation agency in India, bridging culture and technology."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "desc": "Transparency, handcrafted visual excellence, and relentless focus on measurable client ROI."
+    }
+  },
+  "Services": {
+    "eyebrow": "WHAT WE DO",
+    "title": "8 Weapons to Dominate Your Market",
+    "learnMore": "Learn More",
+    "items": {
+      "gbp": {
+        "title": "Google Business Profile",
+        "desc": "Rank #1 on Google Maps. Dominate local searches when buyers are ready to purchase.",
+        "features": ["Local Keyword Domination", "Review Generation Systems", "Map Ranking Audit"]
+      },
+      "web": {
+        "title": "Websites & Web Apps",
+        "desc": "Blazing-fast, custom-engineered React & Next.js sites designed to capture and convert.",
+        "features": ["Mobile-First UX", "Lightning-Fast Speed", "Built-in SEO Best Practices"]
+      },
+      "social": {
+        "title": "Social Media Management",
+        "desc": "Turn passive scrollers into customers. Consistent, on-brand organic content that builds trust.",
+        "features": ["Content Strategy & Scheduling", "Custom Graphic Design", "Community Engagement"]
+      },
+      "ads": {
+        "title": "Paid Ads (Meta & Google)",
+        "desc": "Highly-targeted advertising campaigns focused entirely on generating profitable leads and sales.",
+        "features": ["Advanced Audience Targeting", "A/B Copy Testing", "ROI Tracking & Dashboards"]
+      },
+      "ai": {
+        "title": "AI & Lead Automation",
+        "desc": "Automate repetitive tasks, instantly qualify leads, and follow up within seconds.",
+        "features": ["24/7 Smart AI Agents", "Instant Lead Routing", "Workflow Automation"]
+      },
+      "qr": {
+        "title": "Smart QR Systems",
+        "desc": "Bridge the gap between your physical storefront and your digital profile seamlessly.",
+        "features": ["One-Tap Reviews", "Digital Menu & Catalog", "Dynamic Redirect QR codes"]
+      },
+      "whatsapp": {
+        "title": "WhatsApp Marketing",
+        "desc": "Build automated broadcasting and customer support directly inside the world's favorite chat app.",
+        "features": ["Interactive Chatbots", "Broadcasting & Notifications", "Abandonment Recovery"]
+      },
+      "crm": {
+        "title": "Lead Management CRM",
+        "desc": "Never let a lead fall through the cracks. Track every opportunity from contact to close.",
+        "features": ["Unified Lead Pipeline", "Automated Email & SMS", "Team Performance Metrics"]
+      }
+    }
+  },
+  "WhyUs": {
+    "title": "Why Partner With Us?",
+    "subtitle": "We don't use AI templates or cut corners. We design custom solutions tailored to your unique market.",
+    "cta": "Get A Custom Strategy",
+    "features": [
+      {
+        "title": "Crafted by Humans",
+        "desc": "Bespoke user experiences designed specifically for your target audience, not boilerplate templates."
+      },
+      {
+        "title": "Obsessed with ROI",
+        "desc": "We trace every rupee spent to conversions, leads, and actual business sales."
+      },
+      {
+        "title": "Speed & Optimization",
+        "desc": "Zero lag, clean code, and SEO optimized architecture that ranks higher and loads faster."
+      },
+      {
+        "title": "Bilingual Indian Localisation",
+        "desc": "We speak your customers' language. Deep Telugu and English localization for high-impact regional resonance."
+      },
+      {
+        "title": "End-to-End Delivery",
+        "desc": "From domain setup and design to automation workflows and CRM management under one roof."
+      },
+      {
+        "title": "Dedicated Support",
+        "desc": "Direct line to our core developers and designers. No endless support tickets or bots."
+      }
+    ]
+  },
+  "Process": {
+    "title": "Our Growth Framework",
+    "subtitle": "How we take your business from where it is to where it needs to be.",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "desc": "Deep dive into your business, competitors, and target local audience."
+      },
+      "strategy": {
+        "title": "Strategy",
+        "desc": "Drafting the exact roadmap and picking your digital growth channels."
+      },
+      "design": {
+        "title": "Design",
+        "desc": "Crafting premium user interfaces with custom graphics and typography."
+      },
+      "dev": {
+        "title": "Develop",
+        "desc": "Clean coding with Next.js, ensuring speed, mobile responsiveness, and SEO."
+      },
+      "launch": {
+        "title": "Launch",
+        "desc": "Deploying to production, optimizing speeds, and testing user flows."
+      },
+      "grow": {
+        "title": "Grow & Optimize",
+        "desc": "Continuous analysis, running marketing campaigns, and tweaking for maximum sales."
+      }
+    }
+  },
+  "Industries": {
+    "title": "Industries We Transform",
+    "subtitle": "Tailored digital systems for vertical markets.",
+    "items": {
+      "realestate": "Real Estate",
+      "restaurants": "Restaurants & Cafes",
+      "hotels": "Hotels & Stays",
+      "clinics": "Clinics & Doctors",
+      "education": "Education & Coaching",
+      "construction": "Construction & Builders",
+      "ecom": "E-Commerce Brands",
+      "retail": "Local Retail Stores",
+      "finance": "Financial Services",
+      "salons": "Salons & Spas"
+    }
+  },
+  "Portfolio": {
+    "title": "Our Work Speak Volumes",
+    "subtitle": "Real projects. Real digital impact.",
+    "filterAll": "All Projects",
+    "viewCase": "View Case Study",
+    "metricLabel": "Growth Metric:"
+  },
+  "Testimonials": {
+    "title": "Real Clients. Real Results.",
+    "subtitle": "See how we help business owners reach new heights."
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Got questions? We have answers."
+  },
+  "Contact": {
+    "title": "Let's Scale Your Business",
+    "subtitle": "Get a free 30-minute growth strategy call. No pressure, just actionable value.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "message": "Tell us about your project",
+      "servicesLabel": "Which services do you need?",
+      "submit": "Book Strategy Call →",
+      "submitting": "Securing your slot...",
+      "successTitle": "Booking Confirmed! 🎉",
+      "successDesc": "Thank you! Satish will review your business profile and text/call you within 2 hours to confirm your strategy call."
+    },
+    "founderCard": {
+      "status": "Available Today",
+      "headline": "Chat directly with the founder",
+      "whatsapp": "Message on WhatsApp",
+      "call": "Call Direct"
+    }
+  },
+  "Footer": {
+    "tagline": "Premium digital growth solutions engineered by humans. Based in Andhra Pradesh & Telangana, serving India.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact Us",
+    "madeWith": "Made with ❤️ in India"
+  }
+}
