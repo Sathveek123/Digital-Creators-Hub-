@@ -26,8 +26,30 @@ const teluguFont = Noto_Sans_Telugu({
 });
 
 export const metadata = {
-  title: "Digital Creators Hub — Your Complete Business Growth Partner",
-  description: "Digital Creators Hub helps businesses grow with Digital Marketing, AI Automation, Websites, Local SEO, Google Business Profile, Social Media, CRM, QR Systems and WhatsApp Automation.",
+  title: "Digital Creators Hub — Andhra Pradesh & Telangana's Growth Partner",
+  description: "Digital Creators Hub helps businesses grow with high-performance Websites, Local SEO, WhatsApp Automation, Meta Ads, AI Systems, and CRM Dashboards.",
+  openGraph: {
+    title: "Digital Creators Hub — Andhra Pradesh & Telangana's Growth Partner",
+    description: "500+ businesses trust us for high-performance websites, local SEO, WhatsApp automation, and AI-driven growth systems.",
+    url: 'https://digitalcreatorshub.in',
+    siteName: 'Digital Creators Hub',
+    images: [
+      {
+        url: '/dch-logo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Digital Creators Hub Logo',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Digital Creators Hub — Andhra Pradesh & Telangana's Growth Partner",
+    description: "500+ businesses trust us for high-performance websites, local SEO, and WhatsApp automation.",
+    images: ['/dch-logo.jpg'],
+  },
   other: {
     google: 'notranslate'
   }
@@ -59,6 +81,24 @@ export default async function LocaleLayout({
   // Get messages for the current locale
   const messages = await getMessages();
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Digital Creators Hub',
+    image: '/dch-logo.jpg',
+    telephone: '+919912799855',
+    email: 'hello@digitalcreatorshub.in',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Vijayawada',
+      addressRegion: 'Andhra Pradesh',
+      addressCountry: 'IN',
+    },
+    url: 'https://digitalcreatorshub.in',
+    priceRange: '₹2,999 - ₹49,999',
+    description: "Andhra Pradesh & Telangana's growth partner for websites, local SEO, WhatsApp automation, and AI systems.",
+  };
+
   return (
     <html
       lang={locale}
@@ -68,6 +108,10 @@ export default async function LocaleLayout({
     >
       <head>
         <meta name="google" content="notranslate" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="bg-white text-charcoal font-body selection:bg-primary selection:text-white antialiased pb-14 md:pb-0">
         <NextIntlClientProvider messages={messages}>

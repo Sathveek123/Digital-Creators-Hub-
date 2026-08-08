@@ -1,36 +1,49 @@
-'use client';
-
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { ArrowLeft, Search } from 'lucide-react';
+import { Compass, Home, PhoneCall } from 'lucide-react';
+import { BRAND_CONSTANTS } from '@/lib/constants';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-white text-charcoal antialiased flex flex-col justify-between select-none">
+    <div className="min-h-screen bg-[#FFF8F0] text-charcoal antialiased flex flex-col justify-between select-none">
       <Navbar />
 
-      <main className="flex-grow pt-32 pb-20 flex items-center justify-center">
-        <div className="max-w-md mx-auto px-6 text-center flex flex-col items-center gap-5">
-          <div className="w-16 h-16 rounded-full bg-[#FFF3EC] border border-[#FFD9C2] text-primary flex items-center justify-center">
-            <Search className="w-8 h-8" />
+      <main className="flex-grow pt-32 pb-24 flex items-center justify-center">
+        <div className="max-w-[600px] mx-auto px-6 text-center flex flex-col items-center gap-6">
+          
+          <div className="w-20 h-20 rounded-full bg-[#FFF3EC] text-primary flex items-center justify-center border-2 border-primary/20 shadow-md">
+            <Compass className="w-10 h-10 animate-spin" style={{ animationDuration: '8s' }} />
           </div>
 
-          <span className="text-xs font-bold text-primary uppercase tracking-widest">404 ERROR</span>
-          <h1 className="font-display font-black text-3xl md:text-4xl text-charcoal tracking-tight">
-            Page Not Found
-          </h1>
-          <p className="text-bodytext text-sm font-semibold leading-relaxed">
-            The page you are looking for might have been moved, renamed, or does not exist. Let's get you back on track!
-          </p>
+          <div className="flex flex-col gap-2">
+            <span className="font-display font-black text-6xl md:text-7xl text-primary tracking-tight">404</span>
+            <h1 className="font-display font-black text-2xl md:text-3xl text-charcoal">
+              Page Not Found
+            </h1>
+            <p className="text-bodytext text-sm md:text-base font-semibold leading-relaxed max-w-md mx-auto">
+              The page or growth link you were looking for doesn't exist or has been moved. Let's get you back on track!
+            </p>
+          </div>
 
-          <Link
-            href="/en"
-            className="inline-flex items-center gap-2 bg-primary hover:bg-[#e04d15] text-white font-bold text-sm px-6 py-3 rounded-xl shadow-sm transition-all hover:scale-[1.02] cursor-pointer mt-2"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Return to Homepage</span>
-          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <Link
+              href="/en"
+              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-[#e04d15] text-white font-bold text-sm px-6 py-3.5 rounded-full shadow-md transition-all hover:scale-[1.02]"
+            >
+              <Home className="w-4 h-4" />
+              <span>Go to Homepage</span>
+            </Link>
+
+            <Link
+              href="/en#contact"
+              className="inline-flex items-center justify-center gap-2 bg-white border border-[#DDDDDD] hover:bg-[#FFF9F6] text-charcoal font-bold text-sm px-6 py-3.5 rounded-full shadow-sm transition-all hover:scale-[1.02]"
+            >
+              <PhoneCall className="w-4 h-4 text-primary" />
+              <span>Book Strategy Call</span>
+            </Link>
+          </div>
+
         </div>
       </main>
 

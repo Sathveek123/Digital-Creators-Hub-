@@ -278,9 +278,9 @@ export default function Services() {
     },
   ];
 
-  // Filter based on active tab
+  // Filter based on active tab (Hide 'trading' from 'all' view so local business services take priority)
   const filteredServices = activeTab === 'all'
-    ? servicesList
+    ? servicesList.filter(s => s.category !== 'trading')
     : servicesList.filter(s => s.category === activeTab);
 
   // For the default tab, limit to 6 initially unless "Show More" is clicked

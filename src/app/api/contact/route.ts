@@ -3,7 +3,12 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, phone, company, email, city, services, budget, prefLanguage } = body;
+    const { name, phone, company, email, city, services, budget, prefLanguage, website_hp } = body;
+
+    // Anti-spam Honeypot Check: if bot filled hidden field, drop request
+    if (website_hp) {
+      return NextResponse.json({ success: true, message: 'Request received.' });
+    }
 
     // Validate mandatory fields
     if (!name || !phone || !company) {

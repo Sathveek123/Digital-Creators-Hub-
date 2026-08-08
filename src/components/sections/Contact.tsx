@@ -28,6 +28,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [submittedServices, setSubmittedServices] = useState<string[]>([]);
+  const [agreedToConsent, setAgreedToConsent] = useState(true);
 
   const availableServices = [
     'Google GBP',
@@ -65,6 +66,7 @@ export default function Contact() {
     const newErrors: Record<string, string> = {};
     if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.company.trim()) newErrors.company = 'Business name is required';
+    if (!agreedToConsent) newErrors.consent = 'Please accept data consent to submit';
     
     const rawPhone = formData.phone.trim();
     if (!rawPhone) {
@@ -333,13 +335,38 @@ export default function Contact() {
                         Tell us about your business
                       </label>
                       <textarea
-                        rows={4}
+                        rows={3}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="bg-white border border-[#DDDDDD] focus:border-primary focus:ring-3 focus:ring-primary/10 rounded-xl p-3.5 text-sm focus:outline-none transition-all resize-none"
                         placeholder="Tell us about your business and what's not working digitally..."
                       />
                     </div>
+
+                    {/* Honeypot Spam Protection Field (Hidden) */}
+                    <div className="hidden" aria-hidden="true">
+                      <input
+                        type="text"
+                        name="website_hp"
+                        tabIndex={-1}
+                        autoComplete="off"
+                      />
+                    </div>
+
+                    {/* DPDPA 2023 Data Consent Checkbox */}
+                    <div className="flex items-start gap-2.5 mt-1 text-left">
+                      <input
+                        type="checkbox"
+                        id="dpdpa-consent"
+                        checked={agreedToConsent}
+                        onChange={(e) => setAgreedToConsent(e.target.checked)}
+                        className="mt-0.5 w-4 h-4 text-primary rounded border-gray-300 focus:ring-primary cursor-pointer"
+                      />
+                      <label htmlFor="dpdpa-consent" className="text-xs text-[#666666] font-semibold leading-tight cursor-pointer">
+                        I agree to be contacted by Digital Creators Hub via Phone / WhatsApp and accept the <a href={`/${currentLocale}/privacy`} className="text-primary underline">Privacy Policy</a>.
+                      </label>
+                    </div>
+                    {errors.consent && <span className="text-red-500 text-[11px] font-semibold">{errors.consent}</span>}
 
                     {/* Submit Error Banner */}
                     {errors.submit && (

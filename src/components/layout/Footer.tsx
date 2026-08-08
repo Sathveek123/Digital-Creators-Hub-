@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Mail, Phone, Instagram, Youtube, Facebook, Linkedin, MessageCircle, ArrowUp } from 'lucide-react';
 import { useParams } from 'next/navigation';
+import { BRAND_CONSTANTS } from '@/lib/constants';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -28,10 +29,10 @@ export default function Footer() {
             />
             <div className="flex flex-col text-left">
               <span className="font-display font-black text-xl tracking-tight text-charcoal leading-none">
-                DIGITAL<span className="text-primary">CREATORS</span>
+                DIGITAL<span className="text-primary"> CREATORS HUB</span>
               </span>
               <span className="text-[9px] text-bodytext font-display font-extrabold uppercase tracking-[0.2em] mt-0.5">
-                {currentLocale === 'te' ? 'డిజిటల్ గ్రోత్ పార్ట్‌నర్' : 'Growth Partner'}
+                {currentLocale === 'te' ? 'డిజిటల్ గ్రోత్ పార్ట్‌నర్' : BRAND_CONSTANTS.taglineShort}
               </span>
             </div>
           </a>
@@ -48,11 +49,10 @@ export default function Footer() {
           {/* Social icons */}
           <div className="flex gap-2.5 mt-2">
             {[
-              { icon: Instagram, href: 'https://instagram.com' },
-              { icon: Facebook, href: 'https://facebook.com' },
-              { icon: Linkedin, href: 'https://linkedin.com' },
-              { icon: Youtube, href: 'https://youtube.com' },
-              { icon: MessageCircle, href: 'https://wa.me/919912799855' },
+              { icon: Instagram, href: BRAND_CONSTANTS.socials.instagram },
+              { icon: Facebook, href: BRAND_CONSTANTS.socials.facebook },
+              { icon: Linkedin, href: BRAND_CONSTANTS.socials.linkedin },
+              { icon: MessageCircle, href: BRAND_CONSTANTS.socials.whatsapp },
             ].map((soc, idx) => {
               const IconComponent = soc.icon;
               return (
