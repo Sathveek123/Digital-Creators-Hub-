@@ -221,7 +221,7 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="py-24 md:py-32 bg-[#FFF8F0] text-charcoal overflow-hidden select-none border-b border-border/60">
-      <div className="max-w-[1440px] px-8 md:px-10 mx-auto w-full">
+      <div className="max-w-[1440px] px-4 sm:px-6 md:px-10 mx-auto w-full">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 flex flex-col items-center">

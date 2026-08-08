@@ -1240,7 +1240,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(#E5E5E5_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none z-0" />
 
       {/* Top Contents Grid */}
-      <div className="max-w-[1440px] px-8 md:px-10 mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch relative z-10 my-auto pt-4 pb-4">
+      <div className="max-w-[1440px] px-4 sm:px-6 md:px-10 mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch relative z-10 my-auto pt-4 pb-4">
         
         {/* Left Column (55% width) */}
         <div className="lg:col-span-7 flex flex-col gap-6 text-left">
@@ -1542,7 +1542,7 @@ export default function Hero() {
       </div>
 
       {/* Full-width 3-stat benefit row */}
-      <div className="max-w-[1440px] px-8 md:px-10 mx-auto w-full mt-10 mb-8 z-10 relative">
+      <div className="max-w-[1440px] px-4 sm:px-6 md:px-10 mx-auto w-full mt-10 mb-8 z-10 relative">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
           
           <div className="bg-[#FAFAFA] border border-[#EEEEEE] rounded-2xl p-5 flex items-start gap-4 shadow-sm">

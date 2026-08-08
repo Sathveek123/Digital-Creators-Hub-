@@ -104,7 +104,7 @@ export default async function LocaleLayout({
       lang={locale}
       translate="no"
       suppressHydrationWarning
-      className={`${displayFont.variable} ${bodyFont.variable} ${teluguFont.variable} scroll-smooth notranslate`}
+      className={`${displayFont.variable} ${bodyFont.variable} ${teluguFont.variable} scroll-smooth notranslate w-full max-w-full overflow-x-hidden`}
     >
       <head>
         <meta name="google" content="notranslate" />
@@ -113,9 +113,11 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-white text-charcoal font-body selection:bg-primary selection:text-white antialiased pb-14 md:pb-0">
+      <body className="bg-white text-charcoal font-body selection:bg-primary selection:text-white antialiased pb-14 md:pb-0 w-full max-w-full overflow-x-hidden relative">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <div className="w-full max-w-full overflow-x-hidden relative">
+            {children}
+          </div>
           <FloatingWhatsAppWidget />
           <StickyMobileCtaBar />
         </NextIntlClientProvider>

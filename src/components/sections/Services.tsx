@@ -301,7 +301,7 @@ export default function Services() {
 
   return (
     <section id="services" className="py-24 md:py-32 bg-[#FAFAFA] text-charcoal relative select-none border-b border-border/60">
-      <div className="max-w-[1440px] px-8 md:px-10 mx-auto w-full">
+      <div className="max-w-[1440px] px-4 sm:px-6 md:px-10 mx-auto w-full">
         
         {/* Header Block */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
