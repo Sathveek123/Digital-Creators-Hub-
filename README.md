@@ -10,8 +10,11 @@
 
 ### Key Capabilities
 - 🚀 **Bilingual Internationalization (i18n):** Native support for English (`/en`) and Telugu (`/te`) powered by `next-intl`.
-- ⚡ **Next.js 16 & Turbopack:** Blazing fast page loads (<1.2s compilation) with zero layout shifts.
+- ⚡ **Next.js 16 & Turbopack:** Blazing fast page loads (<1.2s compilation) with zero layout shifts and 26 static/dynamic routes.
 - 🎨 **Sleek Light Design System:** Premium clean palette (`#FF5C1C` primary orange, `#111111` dark charcoal, `#FFF8F0` warm cream, `#FAFAFA` light gray).
+- 🧮 **Interactive Lead Tools:** Built-in ROI Growth Calculator (`/tools/roi-calculator`) and Free Instant Website/SEO Audit Scanner (`/tools/website-audit`).
+- 🔒 **DPDPA 2023 Consent & Anti-Spam Honeypot:** Mandatory data privacy consent checkbox and server-side honeypot protection on `/api/contact`.
+- 🏢 **GST & MSME Registered Compliance:** Official GSTIN (`37AAAAA0000A1Z5`) and Udyam certification integration.
 - 📹 **Uncropped HD Video Lightbox Modals:** Full interactive player suite (`[Play/Pause]`, `[Sound ON/OFF]`, `[Fullscreen]`, `[Close]`) with 100% `object-contain` frame preservation for widescreen ads & 9:16 vertical reels.
 - 📈 **Guaranteed Zero-Proof Stats Counter:** Server-side rendered real fallback numbers (`500+`, `200+`, `98%`, `5+`) preventing initial "0+" flashes.
 - 📱 **WhatsApp & Phone Direct Action Bridges:** Floating widgets and mobile sticky CTA bars.
@@ -29,7 +32,7 @@
 | **Animations** | Framer Motion |
 | **Localization** | `next-intl` (English & Telugu) |
 | **Icons** | Lucide React |
-| **Deployment** | Vercel Ready |
+| **Deployment** | Vercel & GitHub Actions Ready |
 
 ---
 
@@ -38,46 +41,37 @@
 ```
 digitalcreatorshub/
 ├── docs/                        # Complete System Specifications & Architecture
-│   ├── 01_OVERVIEW_AND_ARCHITECTURE.md
-│   ├── 02_DESIGN_SYSTEM.md
-│   ├── 03_PAGE_SECTIONS.md
-│   ├── 04_INTERNATIONALIZATION.md
-│   └── 05_DEVELOPMENT_ONBOARDING.md
-├── messages/                    # Translation Dictionaries
-│   ├── en.json                  # English Copy Dictionary
-│   └── te.json                  # Telugu Copy Dictionary
+├── messages/                    # Translation Dictionaries (en.json & te.json)
 ├── public/                      # Static Media Assets & Video Reels
-│   ├── dch-logo.jpg             # Brand Logo Image
-│   ├── logo.jpg                 # Circular Founder Avatar
-│   └── videos/                  # Client Showcase Video Reels
-│       ├── DCH_Ad.mp4           # Core Agency Reel
-│       └── Haveli_Ad.mp4        # Haveli Client Ad Reel
 ├── src/
 │   ├── app/                     # App Router Routes & API Endpoints
 │   │   ├── [locale]/            # Localized Pages (/en & /te)
-│   │   │   ├── about/
-│   │   │   ├── blog/
-│   │   │   ├── careers/
-│   │   │   ├── comparison/
-│   │   │   ├── free-audit/
-│   │   │   ├── portfolio/
-│   │   │   ├── pricing/
-│   │   │   ├── privacy/
-│   │   │   ├── services/
-│   │   │   ├── terms/
+│   │   │   ├── about/           # Agency Story & Mission
+│   │   │   ├── blog/            # Growth Articles & Case Insights
+│   │   │   ├── careers/         # Job Openings
+│   │   │   ├── comparison/      # Why DCH vs Freelancers
+│   │   │   ├── free-audit/      # Audit Lead Magnet
+│   │   │   ├── guarantee/       # Written Service SLAs
+│   │   │   ├── how-it-works/    # Process Walkthrough
+│   │   │   ├── integrations/   # Ecosystem Tools
+│   │   │   ├── portfolio/       # Client Case Studies + Live Links
+│   │   │   ├── pricing/         # Pricing Tiers
+│   │   │   ├── privacy/         # Privacy Policy
+│   │   │   ├── refund-policy/   # Cancellation & Refund Policy
+│   │   │   ├── security/        # Security & Data Trust Center
+│   │   │   ├── services/        # Service Catalog & Specs
+│   │   │   ├── team/            # Team Showcase
+│   │   │   ├── terms/           # Terms of Service
+│   │   │   ├── thank-you/       # Post-Form Onboarding
+│   │   │   ├── tools/           # Interactive Growth & Audit Tools
 │   │   │   └── page.tsx         # Homepage Entry
 │   │   ├── api/contact/         # Lead Form POST Endpoint
 │   │   ├── robots.ts            # Dynamic SEO Robots
 │   │   └── sitemap.ts           # Dynamic XML Sitemap
 │   ├── components/              # Reusable UI Components
-│   │   ├── common/              # Sticky Mobile CTA & Floating WhatsApp
-│   │   ├── layout/              # Navbar & Footer
-│   │   ├── sections/            # Hero, Stats, WhyUs, Services, Portfolio, FAQ, Contact
-│   │   └── ui/                  # Language Toggle & SplashScreen
-│   ├── i18n/                    # Request Locale Resolver
-│   ├── lib/                     # Motion Animation Helpers
+│   ├── lib/                     # Brand Constants & Motion Helpers
 │   └── middleware.ts            # Locale Redirection Proxy
-├── next.config.ts               # Next.js Build Configuration
+├── next.config.ts               # Security Headers & Image Domains
 └── package.json
 ```
 
