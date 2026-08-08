@@ -31,63 +31,47 @@ digitalcreatorshub/
 │   ├── logo.jpg / dch-logo.jpg # Official circular brand logo image
 │   └── videos/                 # Video showcase reels (DCH_Ad.mp4, Haveli_Ad.mp4)
 ├── src/
-│   ├── app/                    # Next.js App Router root (17 static & dynamic routes)
+│   ├── app/                    # Next.js App Router root (26 static & dynamic routes)
 │   │   ├── [locale]/           # Dynamic localization segment
-│   │   │   ├── layout.tsx      # Main layout (injects providers, fonts & floating CTAs)
+│   │   │   ├── layout.tsx      # Main layout (injects OpenGraph, LocalBusiness Schema.org JSON-LD, fonts & floating CTAs)
+│   │   │   ├── not-found.tsx   # Custom branded white/orange 404 recovery page
 │   │   │   ├── page.tsx        # Homepage compilation root
 │   │   │   ├── about/          # Agency story & metrics page
 │   │   │   ├── blog/           # High-value growth articles & /[slug] detail
 │   │   │   ├── careers/        # Local hiring role listings & applications
 │   │   │   ├── comparison/     # Agency vs Freelancer vs DCH comparison matrix
 │   │   │   ├── free-audit/     # 60-second interactive website & marketing audit
-│   │   │   ├── portfolio/      # Filterable portfolio gallery & /[slug] case studies
+│   │   │   ├── guarantee/      # Written Service Guarantees & SLAs
+│   │   │   ├── how-it-works/   # Transparent 6-step client process walkthrough
+│   │   │   ├── integrations/  # Connected Ecosystem Tools (Meta, Google, Make, Razorpay, OpenAI)
+│   │   │   ├── portfolio/      # Filterable portfolio gallery & /[slug] case studies + live client links
 │   │   │   ├── pricing/        # Transparent 25-services pricing matrix
 │   │   │   ├── privacy/        # Privacy Policy legal document
+│   │   │   ├── refund-policy/  # Cancellation & Refund Policy legal compliance
+│   │   │   ├── security/       # Security & Data Trust Center (256-bit SSL & DPDPA 2023)
 │   │   │   ├── services/       # 25-item service catalog & /[slug] detail
-│   │   │   └── terms/          # Terms of Service legal document
+│   │   │   ├── team/           # Core 12-person team showcase
+│   │   │   ├── terms/          # Terms of Service legal document
+│   │   │   ├── thank-you/      # Post-submission onboarding & conversion tracking
+│   │   │   └── tools/          # Interactive growth tools (/roi-calculator & /website-audit)
 │   │   ├── api/
-│   │   │   └── contact/        # Next.js POST API route for lead form submissions
+│   │   │   └── contact/        # Next.js POST API route (DPDPA consent validation + honeypot anti-spam)
 │   │   ├── robots.ts           # SEO robots.txt generator
-│   │   ├── sitemap.ts          # Dynamic sitemap.xml generator
-│   │   └── globals.css         # Tailwind v4 directives & theme variables
-│   ├── components/
-│   │   ├── common/             # Site-wide persistent conversion utilities
-│   │   │   ├── FloatingWhatsAppWidget.tsx # Floating WhatsApp chat bubble
-│   │   │   └── StickyMobileCtaBar.tsx     # 1-tap mobile Call & WhatsApp bar
-│   │   ├── layout/             # Shared global components
-│   │   │   ├── Navbar.tsx      # Glassmorphism header navbar with circular logo
-│   │   │   └── Footer.tsx      # 4-column footer with brand signature
-│   │   ├── sections/           # Modular landing page components
-│   │   │   ├── Hero.tsx        # Story-style 25-services carousel hero with video modal
-│   │   │   ├── Services.tsx    # Categorized tab services catalog
-│   │   │   ├── Portfolio.tsx   # Project showcase gallery
-│   │   │   ├── FAQ.tsx         # Responsive Q&A accordion grid
-│   │   │   └── Contact.tsx     # Validated lead submission form & maps card
-│   │   └── ui/                 # Reusable UI elements
-│   │       ├── SplashScreen.tsx   # Restrained, centered logo intro screen
-│   │       └── LanguageToggle.tsx # Sliding language switch pill
-│   ├── i18n/
-│   │   └── request.ts          # next-intl configuration helper
+│   │   └── sitemap.ts          # Dynamic XML Sitemap generator
+│   ├── components/             # Reusable UI Components
 │   ├── lib/
-│   │   └── animations.ts       # Shared Framer Motion transition variants
-│   └── middleware.ts           # i18n locale routing redirects handler
-├── package.json                # Project dependencies and dev scripts
-├── tsconfig.json               # TypeScript compiler config
-└── next.config.ts              # Next.js bundler and image domain optimization
+│   │   └── constants.ts        # Centralized brand constants (GSTIN, locked CTAs, social handles)
+│   └── middleware.ts           # Locale Redirection Proxy
+├── next.config.ts              # Security Headers (X-Frame-Options, CSP) & Image Domains
+└── package.json
 ```
 
 ---
 
-## ⚙️ Core Architecture Concepts
+## 🔒 Security & Compliance Architecture
 
-### 1. Unified Internationalization (i18n) Routing
-Rather than loading translation strings asynchronously on the client, next-intl reads the route parameter `/[locale]` during SSR and feeds only the matching dictionary chunk (`en.json` or `te.json`) into the React tree. This prevents any flickering of layout shifts during load.
-
-### 2. High Performance Layouts with Selective Video Lightboxes
-The Hero section features a story-style 25-services carousel with 25 visually unique custom mockup components. High-fidelity video case reels (`DCH_Ad.mp4`, `Haveli_Ad.mp4`) are loaded on-demand inside custom aspect-ratio lightbox modals with single unified control bars and `object-cover` crop-fitting.
-
-### 3. Backend Lead Submission API (`/api/contact`)
-Contact form submissions hit a Next.js Server API endpoint at `/api/contact` that validates request payloads, processes lead data, and returns structured JSON status codes to the client UI.
-
-### 4. Component Isolation
-Every section operates as an isolated component inside `src/components/sections/`. This makes auditing layouts, modifying copy, or upgrading animations completely decoupled from the rest of the application.
+1. **GSTIN & MSME Certification:** Official GSTIN (`37AAAAA0000A1Z5`) and `MSME / Udyam Registered Agency` credentials integrated into footer and trust center.
+2. **DPDPA 2023 Compliance:** Mandatory data consent checkbox integrated on all lead collection forms.
+3. **Anti-Spam Honeypot:** Server-side honeypot evaluation on `/api/contact` to drop bot spam without failing legitimate users.
+4. **HTTP Security Headers:** Configured `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, and `Referrer-Policy` in `next.config.ts`.
+5. **OpenGraph & Schema.org JSON-LD:** Structured `LocalBusiness` data and dynamic social preview cards for WhatsApp and LinkedIn sharing.
