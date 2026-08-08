@@ -78,13 +78,15 @@ export default function Footer() {
           <div className="flex flex-col gap-2.5 text-xs text-[#666666] font-semibold">
             <a href={`/${currentLocale}`} className="hover:text-primary transition-colors">Home</a>
             <a href={`/${currentLocale}/about`} className="hover:text-primary transition-colors">About</a>
+            <a href={`/${currentLocale}/team`} className="hover:text-primary transition-colors">Team</a>
             <a href={`/${currentLocale}/services`} className="hover:text-primary transition-colors">Services</a>
             <a href={`/${currentLocale}/portfolio`} className="hover:text-primary transition-colors">Portfolio</a>
             <a href={`/${currentLocale}/pricing`} className="hover:text-primary transition-colors">Pricing</a>
+            <a href={`/${currentLocale}/guarantee`} className="hover:text-primary transition-colors">Our Guarantees</a>
+            <a href={`/${currentLocale}/how-it-works`} className="hover:text-primary transition-colors">How It Works</a>
             <a href={`/${currentLocale}/comparison`} className="hover:text-primary transition-colors">Why DCH</a>
             <a href={`/${currentLocale}/blog`} className="hover:text-primary transition-colors">Blog</a>
             <a href={`/${currentLocale}/careers`} className="hover:text-primary transition-colors">Careers</a>
-            <a href={`/${currentLocale}/free-audit`} className="hover:text-primary transition-colors">Free Audit</a>
           </div>
         </div>
 
@@ -100,8 +102,7 @@ export default function Footer() {
             <a href={`/${currentLocale}#services`} className="hover:text-primary transition-colors">Paid Advertising</a>
             <a href={`/${currentLocale}#services`} className="hover:text-primary transition-colors">AI Lead Automation</a>
             <a href={`/${currentLocale}#services`} className="hover:text-primary transition-colors">WhatsApp Automation</a>
-            <a href={`/${currentLocale}#services`} className="hover:text-primary transition-colors">QR Code Solutions</a>
-            <a href={`/${currentLocale}#services`} className="hover:text-primary transition-colors">CRM & Dashboards</a>
+            <a href={`/${currentLocale}/integrations`} className="hover:text-primary transition-colors font-bold text-[#16A34A]">Ecosystem & Integrations →</a>
             
             <a href={`/${currentLocale}/services`} className="hover:text-primary transition-colors font-bold text-primary block mt-1.5">
               View All Services →
@@ -109,7 +110,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Col 4: Contacts */}
+        {/* Col 4: Contacts & Compliance */}
         <div className="lg:col-span-3 flex flex-col gap-4 text-left">
           <h3 className="font-display font-bold text-xs text-charcoal tracking-wider uppercase">
             {t('contact')}
@@ -147,10 +148,12 @@ export default function Footer() {
               Book Free Strategy Call
             </a>
 
-            {/* Hours and location line */}
-            <p className="text-[12px] text-[#999999] font-medium leading-relaxed mt-2.5">
-              📍 Vijayawada, AP · Mon–Sat, 9AM–7PM IST
-            </p>
+            {/* Hours, GSTIN and location line */}
+            <div className="flex flex-col gap-1 text-[11px] text-[#888888] font-semibold leading-relaxed mt-2.5">
+              <span>📍 Vijayawada, AP · Mon–Sat, 9AM–7PM IST</span>
+              <span>🏢 GSTIN: {BRAND_CONSTANTS.gstin}</span>
+              <span className="text-[#16A34A] font-bold">✓ MSME / Udyam Registered Agency</span>
+            </div>
           </div>
         </div>
 
@@ -161,20 +164,24 @@ export default function Footer() {
         <p className="text-xs text-bodytext/80 font-medium">
           © 2026 Digital Creators Hub. All rights reserved. | Powered by{' '}
           <a
-            href="https://net-quora-x-agency.vercel.app/"
+            href={BRAND_CONSTANTS.creditUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition-colors font-semibold underline decoration-primary/40 underline-offset-2"
           >
-            NetQuoraX IT Solutions
+            {BRAND_CONSTANTS.creditAgency}
           </a>
         </p>
 
-        {/* Privacy links */}
-        <div className="flex gap-4 text-xs text-[#888888] font-medium">
+        {/* Privacy & Legal links */}
+        <div className="flex flex-wrap gap-3 text-xs text-[#888888] font-medium">
           <a href={`/${currentLocale}/privacy`} className="hover:text-primary transition-colors">Privacy Policy</a>
           <span>·</span>
-          <a href={`/${currentLocale}/terms`} className="hover:text-primary transition-colors">Terms of Service</a>
+          <a href={`/${currentLocale}/terms`} className="hover:text-primary transition-colors">Terms</a>
+          <span>·</span>
+          <a href={`/${currentLocale}/refund-policy`} className="hover:text-primary transition-colors">Refund Policy</a>
+          <span>·</span>
+          <a href={`/${currentLocale}/security`} className="hover:text-primary transition-colors">Security</a>
         </div>
 
         <span className="text-xs text-bodytext/80 font-medium flex items-center gap-1">

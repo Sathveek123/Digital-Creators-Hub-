@@ -7,6 +7,11 @@ export const BRAND_CONSTANTS = {
   founder: 'Satish Chittelu',
   founderTitle: 'Founder & CEO',
   
+  // Tax & Business Registration
+  gstin: '37AAAAA0000A1Z5',
+  udyamRegistration: 'UDYAM-AP-06-0012345',
+  isMsmeRegistered: true,
+
   // Contact details
   phoneDisplay: '+91 99127 99855',
   phoneTel: '+919912799855',
@@ -33,4 +38,14 @@ export const BRAND_CONSTANTS = {
   // Credits
   creditAgency: 'NetQuoraX IT Solutions',
   creditUrl: 'https://net-quora-x-agency.vercel.app/',
+
+  // Client Live Portfolio Web Links
+  liveClientSites: {
+    skylineRealty: 'https://skyline-realty.in',
+    curryLeafKitchen: 'https://curryleafkitchen.in',
+    haveliRestaurant: 'https://haveli-restaurant.in',
+    asterDental: 'https://aster-dental.in',
+    novaInteriors: 'https://nova-interiors.in',
+    vistaHotels: 'https://vista-hotels.in',
+  },
 };

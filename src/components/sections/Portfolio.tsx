@@ -22,6 +22,7 @@ interface Project {
   slug: string;
   isVideo?: boolean;
   videoUrl?: string;
+  liveSiteUrl?: string;
 }
 
 export default function Portfolio() {
@@ -123,7 +124,8 @@ export default function Portfolio() {
       location: 'Hyderabad',
       slug: 'skyline-realty',
       isVideo: true,
-      videoUrl: '/videos/DCH_Ad.mp4'
+      videoUrl: '/videos/DCH_Ad.mp4',
+      liveSiteUrl: 'https://skyline-realty.in',
     },
     {
       id: 2,
@@ -139,7 +141,8 @@ export default function Portfolio() {
       location: 'Vijayawada',
       slug: 'curry-leaf-kitchen',
       isVideo: true,
-      videoUrl: '/videos/Haveli_Ad.mp4'
+      videoUrl: '/videos/Haveli_Ad.mp4',
+      liveSiteUrl: 'https://curryleafkitchen.in',
     },
     {
       id: 3,
@@ -155,7 +158,8 @@ export default function Portfolio() {
       location: 'Guntur',
       slug: 'haveli-restaurant',
       isVideo: true,
-      videoUrl: '/videos/Haveli_Ad.mp4'
+      videoUrl: '/videos/Haveli_Ad.mp4',
+      liveSiteUrl: 'https://haveli-restaurant.in',
     },
     {
       id: 4,
@@ -171,7 +175,8 @@ export default function Portfolio() {
       location: 'Vizag',
       slug: 'aster-dental',
       isVideo: true,
-      videoUrl: '/videos/DCH_Ad.mp4'
+      videoUrl: '/videos/DCH_Ad.mp4',
+      liveSiteUrl: 'https://aster-dental.in',
     },
     {
       id: 5,
@@ -187,7 +192,8 @@ export default function Portfolio() {
       location: 'Guntur',
       slug: 'nova-interiors',
       isVideo: true,
-      videoUrl: '/videos/Haveli_Ad.mp4'
+      videoUrl: '/videos/Haveli_Ad.mp4',
+      liveSiteUrl: 'https://nova-interiors.in',
     },
     {
       id: 6,
@@ -203,7 +209,8 @@ export default function Portfolio() {
       location: 'Tirupati',
       slug: 'vista-hotels',
       isVideo: true,
-      videoUrl: '/videos/Haveli_Ad.mp4'
+      videoUrl: '/videos/Haveli_Ad.mp4',
+      liveSiteUrl: 'https://vista-hotels.in',
     }
   ];
 
@@ -327,10 +334,24 @@ export default function Portfolio() {
                     </span>
                   </div>
 
-                  {/* BOTTOM ATTRIBUTION: Mini client quote snippet */}
-                  <div className="border-t border-[#EEEEEE] pt-3 mt-3 flex items-center justify-between text-[11px] text-[#777777] font-medium leading-none">
-                    <span className="truncate flex-1 pr-2">"{project.quote}"</span>
-                    <span className="font-bold text-charcoal shrink-0">{project.author}</span>
+                  {/* BOTTOM ATTRIBUTION: Mini client quote snippet + Visit Live Site Link */}
+                  <div className="border-t border-[#EEEEEE] pt-3 mt-3 flex flex-col gap-2">
+                    <div className="flex items-center justify-between text-[11px] text-[#777777] font-medium leading-none">
+                      <span className="truncate flex-1 pr-2">"{project.quote}"</span>
+                      <span className="font-bold text-charcoal shrink-0">{project.author}</span>
+                    </div>
+
+                    {project.liveSiteUrl && (
+                      <a
+                        href={project.liveSiteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-[11px] font-bold text-primary hover:underline flex items-center justify-end gap-1 mt-1"
+                      >
+                        <span>Visit Live Site ↗</span>
+                      </a>
+                    )}
                   </div>
 
                 </div>
